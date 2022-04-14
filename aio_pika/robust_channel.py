@@ -83,7 +83,7 @@ class RobustChannel(Channel):
 
         if exc:
             log.exception(
-                "Robust channel %r has been closed.", sender, exc_info=exc,
+                f"Robust channel %r has been closed. exception: {repr(exc)}", sender, exc_info=exc,
             )
             return
 
